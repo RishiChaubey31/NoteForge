@@ -191,6 +191,21 @@ input[type="text"]:focus {
   box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
   outline: none;
 }
+.gradient-text {
+  font-size: 3rem; /* Adjust the font size as needed */
+  font-weight: bold;
+  background: linear-gradient(135deg, #59C173, #a17fe0, #5D26C1); /* Define your gradient colors */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+  text-align: center; /* Optional: Align text in the center */
+  border: 2px solid #fff; /* Optional: Add a white border */
+  border-radius: 10px; /* Optional: Round the corners */
+  padding: 10px; /* Optional: Add some padding */
+  box-shadow: 0 2px 5px rgb(252, 255, 253); /* Optional: Add a shadow */
+  transition: box-shadow 0.3s ease; /* Optional: Add a smooth shadow transition */
+
+}
+
 
 #font-select {
   height: 40px;
