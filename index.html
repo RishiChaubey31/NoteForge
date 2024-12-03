@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./assets/download.png" alt="Logo" class="logo" />
+        <div class="actions">
+          <button id="undo">
+            <span class="material-icons">undo</span> Undo
+          </button>
+          <button id="redo">
+            <span class="material-icons">redo</span> Redo
+          </button>
+        </div>
+      </header>
+      <main>
+        <div id="text-container" class="text-container"></div>
+      </main>
+      <footer>
+        <div class="controls">
+          <select id="font-select">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Impact">Impact</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Lucida Sans">Lucida Sans</option>
+            <option value="Helvetica">Helvetica</option>
+            <option value="Calibri">Calibri</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Franklin Gothic Medium">
+              Franklin Gothic Medium
+            </option>
+            <option value="Century Gothic">Century Gothic</option>
+            <option value="Palatino Linotype">Palatino Linotype</option>
+            <option value="Gill Sans">Gill Sans</option>
+            <option value="Futura">Futura</option>
+            <option value="Cambria">Cambria</option>
+            <option value="Candara">Candara</option>
+            <option value="Bookman">Bookman</option>
+            <option value="Didot">Didot</option>
+            <option value="Optima">Optima</option>
+            <option value="Rockwell">Rockwell</option>
+            <option value="Perpetua">Perpetua</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Consolas">Consolas</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Century Schoolbook">Century Schoolbook</option>
+            <option value="Brush Script MT">Brush Script MT</option>
+            <option value="Lucida Bright">Lucida Bright</option>
+            <option value="Copperplate">Copperplate</option>
+            <option value="Papyrus">Papyrus</option>
+            <option value="Baskerville">Baskerville</option>
+            <option value="Avenir">Avenir</option>
+            <option value="Charter">Charter</option>
+            <option value="Hoefler Text">Hoefler Text</option>
+            <option value="PT Sans">PT Sans</option>
+            <option value="PT Serif">PT Serif</option>
+            <option value="Droid Sans">Droid Sans</option>
+            <option value="Droid Serif">Droid Serif</option>
+            <option value="Merriweather">Merriweather</option>
+            <option value="Lora">Lora</option>
+            <option value="Playfair Display">Playfair Display</option>
+            <option value="Raleway">Raleway</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Oswald">Oswald</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Open Sans">Open Sans</option>
+            <option value="Lato">Lato</option>
+            <option value="Source Sans Pro">Source Sans Pro</option>
+            <option value="Noto Sans">Noto Sans</option>
+          </select>
+          <label id="label" for="font-size-slider"
+            >Font Size: <span id="font-size">16px</span></label
+          >
+          <input
+            type="range"
+            id="font-size-slider"
+            min="10"
+            max="200"
+            value="16"
+          />
+          <button id="bold">
+            <span class="material-icons">format_bold</span> Bold
+          </button>
+          <button id="italic">
+            <span class="material-icons">format_italic</span> Italics
+          </button>
+
+          <input type="text" id="text-input" placeholder="Enter text" />
+          <button id="add-text">Add Text</button>
+        </div>
+        <div class="palette-container">
+          <!-- Row 1 -->
+          <div class="palette-row">
+            <div class="color-swatch" style="background-color: #000000"></div>
+            <div class="color-swatch" style="background-color: #808080"></div>
+            <div class="color-swatch" style="background-color: #c0c0c0"></div>
+            <div class="color-swatch" style="background-color: #ffffff"></div>
+            <div class="color-swatch" style="background-color: #d3d3d3"></div>
+            <div class="color-swatch" style="background-color: #a9a9a9"></div>
+            <div class="color-swatch" style="background-color: #696969"></div>
+            <div class="color-swatch" style="background-color: #ff0000"></div>
+            <div class="color-swatch" style="background-color: #ffa500"></div>
+            <div class="color-swatch" style="background-color: #ffff00"></div>
+            <div class="color-swatch" style="background-color: #008000"></div>
+            <div class="color-swatch" style="background-color: #800000"></div>
+            <div class="color-swatch" style="background-color: #ff6347"></div>
+            <div class="color-swatch" style="background-color: #ffd700"></div>
+          </div>
+
+         
+
+          <!-- Row 3 -->
+          <div class="palette-row">
+            <div class="color-swatch" style="background-color: #0000ff"></div>
+            <div class="color-swatch" style="background-color: #4b0082"></div>
+            <div class="color-swatch" style="background-color: #800080"></div>
+            <div class="color-swatch" style="background-color: #00ffff"></div>
+            <div class="color-swatch" style="background-color: #008080"></div>
+            <div class="color-swatch" style="background-color: #000080"></div>
+            <div class="color-swatch" style="background-color: #00ced1"></div>
+            <div class="color-swatch" style="background-color: #a52a2a"></div>
+            <div class="color-swatch" style="background-color: #f08080"></div>
+            <div class="color-swatch" style="background-color: #ffd700"></div>
+            <div class="color-swatch" style="background-color: #7cfc00"></div>
+            <div class="color-swatch" style="background-color: #98fb98"></div>
+            <div class="color-swatch" style="background-color: #adff2f"></div>
+            <div class="color-swatch" style="background-color: #32cd32"></div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="palette-row">
+            <div class="color-swatch" style="background-color: #f0e68c"></div>
+            <div class="color-swatch" style="background-color: #d2b48c"></div>
+            <div class="color-swatch" style="background-color: #a0522d"></div>
+            <div class="color-swatch" style="background-color: #deb887"></div>
+            <div class="color-swatch" style="background-color: #f4a460"></div>
+            <div class="color-swatch" style="background-color: #b8860b"></div>
+            <div class="color-swatch" style="background-color: #8b4513"></div>
+            <div class="color-swatch" style="background-color: #f5fffa"></div>
+            <div class="color-swatch" style="background-color: #ffe4e1"></div>
+            <div class="color-swatch" style="background-color: #ffb6c1"></div>
+            <div class="color-swatch" style="background-color: #ffc0cb"></div>
+            <div class="color-swatch" style="background-color: #ff69b4"></div>
+            <div class="color-swatch" style="background-color: #ff1493"></div>
+            <div class="color-swatch" style="background-color: #c71585"></div>
+          </div>
+
+          <!-- Row 7 -->
+          <div class="palette-row">
+            <div class="color-swatch" style="background-color: #f0f8ff"></div>
+            <div class="color-swatch" style="background-color: #e0ffff"></div>
+            <div class="color-swatch" style="background-color: #b0e0e6"></div>
+            <div class="color-swatch" style="background-color: #add8e6"></div>
+            <div class="color-swatch" style="background-color: #87ceeb"></div>
+            <div class="color-swatch" style="background-color: #87cefa"></div>
+            <div class="color-swatch" style="background-color: #4682b4"></div>
+            <div class="color-swatch" style="background-color: #d2691e"></div>
+            <div class="color-swatch" style="background-color: #c71585"></div>
+            <div class="color-swatch" style="background-color: #6a5acd"></div>
+            <div class="color-swatch" style="background-color: #4169e1"></div>
+            <div class="color-swatch" style="background-color: #191970"></div>
+            <div class="color-swatch" style="background-color: #000080"></div>
+            <div class="color-swatch" style="background-color: #483d8b"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
